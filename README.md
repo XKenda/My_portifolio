@@ -10,4 +10,4 @@ Welcome to my digital home! This repository contains my personal portfolio websi
 
 ## 🚀 Live Demo
 
-🌐 **Visit my portfolio:** [xkenda.dev](https://xkenda.dev) *(*
+🌐 **Visit my portfolio:** [xkenda.dev]([https://xkenda.dev](https://xkenda.github.io/My_portifolio/)) *(*
