@@ -1,0 +1,70 @@
+.resume-con {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.resume-btn {
+  pointer-events: auto;
+  position: relative;
+  display: inline-flex;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #1d3557;
+  color: #f8f9fa;
+  font-size: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.resume-btn:hover {
+  transform: scale(1.06);
+  background: #457b9d;
+}
+
+.resume-tooltip {
+  position: absolute;
+  bottom: 72px;
+  right: 50%;
+  transform: translateX(50%) translateY(6px);
+  background: #081c30;
+  color: #f8f9fa;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.resume-btn:hover .resume-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(50%) translateY(0);
+}
+
+@media (max-width: 650px) {
+  .resume-con {
+    bottom: 14px;
+    right: 14px;
+  }
+
+  .resume-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.05rem;
+  }
+
+  .resume-tooltip {
+    bottom: 60px;
+    font-size: 0.78rem;
+  }
+}
