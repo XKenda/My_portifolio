@@ -68,14 +68,14 @@ const Main = () => {
                 <p className="main-info-f-p">Hi! I'm Mahmoud Ibrahim</p>
                 <p className="main-info-s-p">Shabaan, <span className="main-typing-effect">{
             <Typewriter
-                words={["Web Developer", "FrontEnd Developer", "React JS Developer"]}
+                words={["Full Stack Developer", "FrontEnd Developer", "BackEnd Developer"]}
                 loop
                 typeSpeed={150}
                 deleteSpeed={90}
                 delaySpeed={1000}
                 />
             }</span></p>
-                <p className="main-info-disc">Hello Everyone I have 8 moths of Experience In Web Development</p>
+                <p className="main-info-disc">Hello Everyone I have 2 years of Experience In Web Development</p>
                 <p onClick={()=> {
                 document.querySelector("#connect-with").scrollIntoView({
                     behavior: "smooth"

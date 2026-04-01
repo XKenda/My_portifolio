@@ -255,6 +255,12 @@ body {
 }
 
 .main-typing-effect {
+  /* border-right: 5px solid rgba(255, 255, 255, 0.7); */
+  /* height: 150px; */
+  display: block;
+}
+
+.main-typing-effect span {
   border-right: 5px solid rgba(255, 255, 255, 0.7);
 }
 
@@ -334,6 +340,77 @@ body {
 
 .skill-name {
   margin-top: -20px;
+}
+
+/* resume floating download button */
+.resume-con {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.resume-btn {
+  pointer-events: auto;
+  position: relative;
+  display: inline-flex;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #1d3557;
+  color: #f8f9fa;
+  font-size: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.resume-btn:hover {
+  transform: scale(1.06);
+  background: #457b9d;
+}
+
+.resume-tooltip {
+  position: absolute;
+  left: -400%;
+  transform: translateX(50%) translateY(6px);
+  background: #081c30;
+  color: #f8f9fa;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.resume-btn:hover .resume-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(50%) translateY(0);
+}
+
+@media (max-width: 650px) {
+  .resume-con {
+    bottom: 14px;
+    right: 14px;
+  }
+
+  .resume-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.05rem;
+  }
+
+  .resume-tooltip {
+    bottom: 60px;
+    font-size: 0.78rem;
+  }
 }
 
 
@@ -429,6 +506,7 @@ body {
   flex-direction: column;
   justify-content: center;
   z-index: 1;
+  
  }
 .project-con .project::after {
   content: "";
@@ -452,10 +530,10 @@ body {
 .project .project-title,
 .project .project-discribtion,
 .project a {
-  /* استخدمنا بوسيشن ريلاتيف مع زد ايندكس عشان النص يطلع فوق الافتر ايفكت  */
   position: relative;
   z-index: 2;
   font-size: 25px;
+  text-transform: capitalize;
   margin-bottom: 10px;
   opacity: 0;
   transition: 0.25s;
@@ -463,7 +541,7 @@ body {
 }
 
 .project .project-discribtion {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .project-con .project:hover .project-title,
@@ -473,10 +551,27 @@ body {
   opacity: 1;
 }
 
+.no-image {
+  font-size: 24px;
+
+}
 
 .working-exp-p,
 .third-sec-about {
   font-size: 20px;
+}
+
+.work-exp-con {
+  display: flex;
+}
+
+.work-exp {
+  display: flex;
+  justify-content: space-around;
+}
+
+.work-exp .position-title {
+  font-size: 22px;
 }
 
 /* connect sec */
@@ -519,7 +614,7 @@ max-width: 90vw;
   border-radius: 10px;
   border: 1px solid #E0DEE3;
   background: none;
-  color: #191410;
+  color: #ffffff;
   transition: 0.5s;
   font-size: 18px;
 }
@@ -529,6 +624,7 @@ max-width: 90vw;
 
 .connect-sec .connect_form input:focus {
   background-color: #E0DEE3;
+  color: #191410;
   outline: none;
 }
 .connect-sec .connect_form input:focus::placeholder{
@@ -552,7 +648,7 @@ max-width: 90vw;
   display: block;
   border-radius: 20px;
   background: none;
-  color: #191410;
+  color: #ffffff;
   border: 1px solid #E0DEE3 ;
   padding: 20px;
   font-size: 18px;
@@ -564,6 +660,7 @@ max-width: 90vw;
 
 .connect_form textarea:focus {
   background-color: #E0DEE3;
+  color: #191410;
   outline: none;
 }
 

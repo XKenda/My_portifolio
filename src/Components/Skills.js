@@ -5,12 +5,37 @@ import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css";
 
 const sk = [
-    { id: 1, name: "HTML5", percentage: "90" },
+    { id: 1, name: "HTML5", percentage: "95" },
     { id: 2, name: "CSS3", percentage: "85" },
-    { id: 3, name: "JavaScript", percentage: "80" },
-    { id: 4, name: "React", percentage: "70" },
-    { id: 5, name: "Responsive Design", percentage: "75" },
-    {id: 6, name: "NodeJS", percentage: "55"}
+    { id: 3, name: "JavaScript (ES6+)", percentage: "80" },
+    {id: 4, name: "TypeScript", percentage: "75"},
+    { id: 5, name: "React", percentage: "85" },
+    { id: 6, name: "Responsive Design", percentage: "95" },
+    {id: 7, name: "Redux Toolkit", percentage: "70"},
+    {id: 7, name: "Tailwind CSS", percentage: "85"},
+    {id: 8, name: "Node.js", percentage: "80"},
+    {id: 9, name: "Express.js", percentage: "70"},
+    {id: 10, name: "REST APIs", percentage: "75"},
+    {id: 11, name: "JWT Authentication", percentage: "90"},
+    {id: 12, name: "cookie parser", percentage: "70"},
+    {id: 13, name: "PostgreSQL", percentage: "70"},
+    {id: 14, name: "MongoDB", percentage: "85"},
+    {id: 15, name: "mongoose", percentage: "80"},
+    {id: 16, name: "SQL", percentage: "55"},
+    {id: 17, name: "Git", percentage: "70"},
+    {id: 18, name: "github", percentage: "80"},
+    {id: 19, name: "Debugging", percentage: "90"},
+    {id: 20, name: "Jest", percentage: "60"},
+
+
+
+
+
+
+
+
+
+
 
 ];
 
