@@ -1,13 +1,29 @@
-# My Portfolio 🎨
+# Mahmoud Ibrahim — Portfolio
 
-> A beautifully crafted personal portfolio website showcasing my work, skills, and journey as a developer.
+A responsive personal portfolio built with React 19 and Create React App. It
+introduces my full-stack development focus, selected projects, technical
+interests, learning journey, and contact details.
 
-![Portfolio Screenshot](./assets/screenshot.png)
+## Run locally
 
-## ✨ What's Inside?
+```bash
+npm install
+npm start
+```
 
-Welcome to my digital home! This repository contains my personal portfolio website—a single-page application that tells my story through clean design, smooth interactions, and carefully crafted CSS animations. No heavy frameworks, just pure CSS artistry paired with JavaScript where it matters.
+Create a production build with `npm run build`. Run the test suite with
+`npm test -- --watchAll=false`.
 
-## 🚀 Live Demo
+## Project structure
 
-🌐 **Visit my portfolio:** [xkenda.dev](https://xkenda.github.io/My_portifolio/) *(*
+- `src/Components/` — page sections and shared reveal animation
+- `src/data/portfolio.js` — project, skill, and journey content
+- `src/portfolio.css` — responsive visual system and motion preferences
+- `src/images/` — portfolio artwork, project preview, and resume
+
+The contact form uses the existing EmailJS integration and reports success
+only after the service accepts a message.
+
+## Live portfolio
+
+[xkenda.github.io/My_portifolio](https://xkenda.github.io/My_portifolio/)
