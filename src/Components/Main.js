@@ -1,93 +1,113 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import main_img from "../images/main.png"
+import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
-import { BsArrowRightCircle } from "react-icons/bs";
+import { FiArrowDownRight, FiArrowUpRight, FiCode } from "react-icons/fi";
+import resumePDF from "../images/resume.pdf";
 
-    
+function Main() {
+  const [reduceMotion, setReduceMotion] = useState(false);
 
-const Main = () => {
-    // const texts = ["Web Developer", "FrontEnd Developer", "React JS Developer"];
-    // let i = 0
-    // let [x, setx] = useState(texts[0].split(""))
-    // let [visible, setvisible] = useState("")
-    // const switching = () => {
-    //     if (i < texts.length){
-    //     } else {
-    //         i = 0
-    //     }
-    //     setx(x = texts[i++].split(""))
-    //     const Ap = () => {
-    //         setvisible(0)
-    //         x.forEach((l, o)=>{
-    //             const id3 = setTimeout(()=> {console.log(l)},o * 1000)
-    //             return ()=> clearTimeout(id3)
-    //     })
-    //     }
-    //     const id2 = setInterval(Ap,1000)
-    //     return() => clearInterval(id2)
-        
-    // }
+  useEffect(() => {
+    const preference = window.matchMedia?.("(prefers-reduced-motion: reduce)");
+    if (!preference) return undefined;
+    const updatePreference = () => setReduceMotion(preference.matches);
+    updatePreference();
+    preference.addEventListener?.("change", updatePreference);
+    return () => preference.removeEventListener?.("change", updatePreference);
+  }, []);
 
-
-    // useEffect(() => {
-    //     const id = setInterval(switching, 4000);
-    //     return () => clearInterval(id);
-    // }, []);
-
-    // let wordIndex = 0;
-    // let [word, setword] = useState([]);
-    // let [letter, setletter] = useState("");
-    
-    // const  typingA = () =>{
-    //     const id  = setInterval(() => {
-    //         setword(word = texts[0].split(""));
-    //         console.log(word);
-    //         let l = 0;
-    //         const id3 =  setInterval(()=>{
-    //             console.log(word[l])
-    //             setletter(letter += word[l++]);
-    //         }, 1000);
-
-    //         if(wordIndex < texts.length){
-    //             wordIndex++;
-    //         } else {
-    //             wordIndex = 0;
-    //         }
-    //     }, 1000);
-    //     return() => clearInterval(id);
-    // }
-
-    // useMemo(
-    //     typingA()
-    // ,[]);
-
-    return(
-        <div id="home" className="main-con">
-            <div className="main-info-con">
-                <h2 className="main-info-wel">Welcome All In My Portifolio</h2>
-                <p className="main-info-f-p">Hi! I'm Mahmoud Ibrahim</p>
-                <p className="main-info-s-p">Shabaan, <span className="main-typing-effect">{
-            <Typewriter
-                words={["Full Stack Developer", "FrontEnd Developer", "BackEnd Developer"]}
-                loop
-                typeSpeed={150}
-                deleteSpeed={90}
-                delaySpeed={1000}
+  return (
+    <section id="home" className="hero-section">
+      <div className="hero-grid page-shell">
+        <div className="hero-copy">
+          <p className="eyebrow"><span className="eyebrow-dot" /> Hello, I&apos;m Mahmoud</p>
+          <h1>
+            Building digital
+            <br />
+            experiences, <span>one line</span>
+            <br />
+            of code at a time.
+          </h1>
+          <p className="hero-intro">
+            I&apos;m a Full Stack Web Developer focused on building modern web
+            applications with React and Node.js.
+          </p>
+          <p className="hero-role" aria-label="Full Stack Web Developer">
+            <span className="role-prefix">Currently focused on</span>
+            <span className="role-name" aria-live="polite">
+              {reduceMotion ? (
+                "Full Stack Web Development"
+              ) : (
+                <Typewriter
+                  words={[
+                    "Full Stack Web Development",
+                    "React.js Applications",
+                    "Node.js & APIs",
+                  ]}
+                  loop
+                  cursor
+                  cursorStyle="_"
+                  typeSpeed={65}
+                  deleteSpeed={35}
+                  delaySpeed={1600}
                 />
-            }</span></p>
-                <p className="main-info-disc">Hello Everyone I have 2 years of Experience In Web Development</p>
-                <p onClick={()=> {
-                document.querySelector("#connect-with").scrollIntoView({
-                    behavior: "smooth"
-                })
-
-            }} className="main-info-btn">Let's connect <BsArrowRightCircle /></p>
-            </div>
-            <div className="main-photo-con">
-                <img src={main_img} alt="dog-photo"/>
-            </div>
+              )}
+            </span>
+          </p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#projects">
+              Explore projects <FiArrowUpRight aria-hidden="true" />
+            </a>
+            <a className="button button-secondary" href="#contact">
+              Let&apos;s connect <FiArrowDownRight aria-hidden="true" />
+            </a>
+            <a className="resume-link" href={resumePDF} download>
+              Download resume <FiArrowUpRight aria-hidden="true" />
+            </a>
+          </div>
+          <div className="hero-footnote">
+            <span>Computer Science · AI specialization</span>
+            <span>Based in Egypt</span>
+          </div>
         </div>
-    )
+
+        <div className="hero-visual" aria-label="A visual snapshot of my development workflow">
+          <div className="visual-orbit orbit-one" />
+          <div className="visual-orbit orbit-two" />
+          <div className="visual-cross cross-one" />
+          <div className="visual-cross cross-two" />
+          <div className="workflow-card">
+            <div className="workflow-card-top">
+              <span className="window-lights"><i /><i /><i /></span>
+              <span className="workflow-label">A little about my process</span>
+              <FiCode aria-hidden="true" />
+            </div>
+            <div className="workflow-title">
+              <span className="workflow-index">01 — 03</span>
+              <h2>Think it.<br />Build it.<br /><em>Improve it.</em></h2>
+            </div>
+            <div className="workflow-lines" aria-hidden="true">
+              <span /><span /><span />
+            </div>
+            <div className="workflow-card-bottom">
+              <span>FRONTEND <b>↗</b></span>
+              <span>BACKEND <b>↗</b></span>
+              <span>LEARNING <b>↗</b></span>
+            </div>
+          </div>
+          <div className="float-note note-code">
+            <span className="note-icon"><FiCode aria-hidden="true" /></span>
+            <span><b>Full stack</b><small>From interface to API</small></span>
+          </div>
+          <div className="float-note note-learning">
+            <span className="learning-dot" />
+            <span><b>Always learning</b><small>Next up: .NET fundamentals</small></span>
+          </div>
+          <div className="visual-caption"><span>FIG. 01</span> A work in progress, by design</div>
+        </div>
+      </div>
+      <a className="scroll-cue" href="#about"><span /> Scroll to explore</a>
+    </section>
+  );
 }
 
-export default React.memo(Main);
+export default Main;
