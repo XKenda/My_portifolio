@@ -52,9 +52,11 @@ function Projects() {
                     <span className="project-number">{project.number}</span>
                     <h3>{project.name}</h3>
                   </div>
-                  <span className={`status-badge${project.status === "Completed" ? " status-complete" : ""}`}>
-                    <i /> {project.status}
-                  </span>
+                  {project.status && (
+                    <span className={`status-badge${project.status === "Completed" ? " status-complete" : ""}`}>
+                      <i /> {project.status}
+                    </span>
+                  )}
                 </div>
                 <p className="project-description">{project.description}</p>
                 <ul className="project-tags">

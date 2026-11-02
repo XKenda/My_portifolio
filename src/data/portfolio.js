@@ -1,4 +1,5 @@
 import moviePreview from "../images/movieProject.png";
+import ecommercePreview from "../images/E-commerce.png";
 
 export const navigation = [
   { label: "Home", href: "#home" },
@@ -46,16 +47,6 @@ export const projects = [
     visual: "restaurant",
   },
   {
-    number: "04",
-    name: "Subscription Tracker",
-    status: "In progress",
-    description:
-      "A Node.js and MongoDB API for subscription records. Account flows and a subscription model are present; several subscription routes are still placeholders.",
-    technologies: ["Node.js", "Express", "MongoDB", "Mongoose"],
-    repository: "https://github.com/XKenda/subscription-tracker",
-    visual: "api",
-  },
-  {
     number: "05",
     name: "To-Do List API",
     status: "In progress",
@@ -67,13 +58,14 @@ export const projects = [
   },
   {
     number: "06",
-    name: "Classroom Frontend",
-    status: "In progress",
+    name: "E-Commerce Application",
     description:
-      "A classroom-oriented frontend being developed with a dashboard and subject routes, built with React, TypeScript, and Refine.",
-    technologies: ["React", "TypeScript", "Refine", "Tailwind CSS"],
-    repository: "https://github.com/XKenda/classroom-frontend",
-    visual: "classroom",
+      "A React storefront that loads product data from the Fake Store API, supports category filtering and product details, and uses Redux Toolkit to manage the shopping cart.",
+    technologies: ["React.js", "JavaScript", "Redux Toolkit", "HTML5", "CSS3", "REST APIs"],
+    repository: "https://github.com/XKenda/e_commerce",
+    demo: "https://xkenda.github.io/e_commerce/",
+    image: ecommercePreview,
+    visual: "ecommerce",
   },
 ];
 
@@ -84,14 +76,16 @@ export const skillGroups = [
     skills: [
       "HTML5",
       "CSS3",
-      "JavaScript",
+      "JavaScript (ES6+)",
       "TypeScript",
-      "React",
+      "React.js",
       "React Router",
       "Redux Toolkit",
       "Tailwind CSS",
       "Bootstrap",
       "Responsive design",
+      "Flexbox",
+      "CSS Grid",
     ],
   },
   {
@@ -101,7 +95,7 @@ export const skillGroups = [
       "Node.js",
       "Express.js",
       "REST APIs",
-      "JWT",
+      "JWT Authentication",
       "bcrypt",
       "API integration",
     ],
@@ -114,7 +108,23 @@ export const skillGroups = [
   {
     title: "Tools & engineering",
     description: "Tools and practices I use while building and learning.",
-    skills: ["Git", "GitHub", "Docker", "Postman", "Debugging", "Clean code"],
+    skills: [
+      "Git",
+      "GitHub",
+      "Docker",
+      "CI/CD",
+      "VS Code",
+      "Chrome DevTools",
+      "Jest",
+      "Postman",
+      "Debugging",
+      "Clean code",
+      "Object-Oriented Programming (OOP)",
+      "SOLID Principles",
+      "Design Patterns",
+      "Data Structures",
+      "Web Security (OWASP)",
+    ],
   },
 ];
 
@@ -125,7 +135,50 @@ export const learningSkills = [
   "Software architecture",
   "System design",
   "Testing fundamentals",
-  "SOLID principles",
+];
+
+export const certifications = [
+  {
+    title: "Front-End Web Development Diploma (React.js)",
+    provider: "SEF Academy",
+    date: "April 2025",
+    description:
+      "Completed a six-month diploma focused on frontend web development using React.js, building a foundation in modern frontend development and component-based application architecture.",
+  },
+  {
+    title: "Back-End Web Development Diploma (Node.js)",
+    provider: "SEF Academy",
+    date: "September 2025",
+    description:
+      "Completed a three-month backend development diploma focused on Node.js and building backend web applications.",
+  },
+  {
+    title: "React Web Design Training",
+    provider: "OrbScope Academy",
+    description:
+      "Successfully completed a React Web Design training program, gaining practical experience in designing and developing web interfaces using React.",
+  },
+  {
+    title: "Digital Marketing Certification",
+    provider: "HubSpot Academy",
+    date: "June 2026",
+    description:
+      "Demonstrated knowledge of digital marketing practices, including SEO-friendly content creation, website optimization, social media strategy, video marketing, advertising, and measuring marketing performance.",
+  },
+  {
+    title: "Inbound Sales Certification",
+    provider: "HubSpot Academy",
+    date: "August 2026",
+    description:
+      "Demonstrated knowledge of the Inbound Sales Methodology, including identifying, connecting with, exploring the needs of, and advising potential buyers.",
+  },
+  {
+    title: "Basics of Pricing",
+    provider: "Teachable Course / Dr. Ehab Mesallum",
+    date: "July 2026",
+    description:
+      "Completed the Basics of Pricing course, covering foundational concepts and practices related to pricing.",
+  },
 ];
 
 export const journey = [

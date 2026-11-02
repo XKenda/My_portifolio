@@ -13,6 +13,9 @@
   --shell: 1160px;
   --mono: "DM Mono", "Courier New", monospace;
   --sans: "DM Sans", "Manrope", Arial, sans-serif;
+  --text-meta: 0.75rem;
+  --text-small: 0.875rem;
+  --text-body: 1rem;
 }
 
 * {
@@ -143,7 +146,7 @@ textarea:focus-visible {
   position: relative;
   color: #b7b9b1;
   text-decoration: none;
-  font-size: 12px;
+  font-size: var(--text-small);
   transition: color 180ms ease;
 }
 
@@ -202,7 +205,7 @@ textarea:focus-visible {
   border: 1px solid rgba(241, 240, 233, 0.35);
   color: var(--paper);
   text-decoration: none;
-  font-size: 12px;
+  font-size: var(--text-body);
   transition: border-color 180ms ease, color 180ms ease;
 }
 
@@ -262,7 +265,7 @@ textarea:focus-visible {
   margin: 0;
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: var(--text-meta);
   letter-spacing: 0.11em;
   line-height: 1.6;
   text-transform: uppercase;
@@ -295,7 +298,7 @@ textarea:focus-visible {
 .section-heading h2 span,
 .section-title span,
 .journey-heading h2 span,
-.certification-inner h2 span,
+.certification-heading h2 span,
 .contact-copy h2 span {
   color: var(--accent);
 }
@@ -314,7 +317,7 @@ textarea:focus-visible {
   align-items: baseline;
   gap: 9px;
   margin: 20px 0 0;
-  font-size: 13px;
+  font-size: var(--text-small);
 }
 
 .role-prefix {
@@ -345,7 +348,7 @@ textarea:focus-visible {
   border: 1px solid transparent;
   cursor: pointer;
   text-decoration: none;
-  font-size: 12px;
+  font-size: var(--text-meta);
   font-weight: 700;
   transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
 }
@@ -388,7 +391,7 @@ textarea:focus-visible {
   padding: 8px 4px;
   color: #d7d8d1;
   text-decoration: none;
-  font-size: 11px;
+  font-size: var(--text-meta);
 }
 
 .resume-link svg {
@@ -406,7 +409,7 @@ textarea:focus-visible {
   margin-top: 55px;
   color: var(--dim);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: var(--text-meta);
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
@@ -617,14 +620,14 @@ textarea:focus-visible {
 }
 
 .float-note b {
-  font-size: 10px;
+  font-size: var(--text-meta);
   font-weight: 600;
 }
 
 .float-note small {
   margin-top: 2px;
   color: var(--muted);
-  font-size: 8px;
+  font-size: var(--text-meta);
 }
 
 .visual-caption {
@@ -633,7 +636,7 @@ textarea:focus-visible {
   bottom: 2%;
   color: var(--dim);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 0.625rem;
   letter-spacing: 0.04em;
 }
 
@@ -652,7 +655,7 @@ textarea:focus-visible {
   color: var(--dim);
   text-decoration: none;
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 0.625rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -682,7 +685,7 @@ textarea:focus-visible {
 
 .section-heading h2,
 .journey-heading h2,
-.certification-inner h2 {
+.certification-heading h2 {
   margin: 21px 0 0;
   font-size: clamp(38px, 4vw, 54px);
   font-weight: 600;
@@ -694,7 +697,7 @@ textarea:focus-visible {
   margin-top: 47px;
   color: var(--dim);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 0.625rem;
   letter-spacing: 0.12em;
 }
 
@@ -712,8 +715,8 @@ textarea:focus-visible {
 .about-content p {
   margin: 0 0 18px;
   color: #b6b8af;
-  font-size: 14px;
-  line-height: 1.9;
+  font-size: var(--text-body);
+  line-height: 1.8;
 }
 
 .about-content .about-lead {
@@ -742,14 +745,14 @@ textarea:focus-visible {
 .fact span {
   color: var(--dim);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: var(--text-meta);
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .fact strong {
   color: var(--paper);
-  font-size: 12px;
+  font-size: var(--text-small);
   font-weight: 500;
 }
 
@@ -780,8 +783,8 @@ textarea:focus-visible {
   gap: 12px;
   margin: 0 0 4px;
   color: var(--muted);
-  font-size: 12px;
-  line-height: 1.75;
+  font-size: var(--text-small);
+  line-height: 1.7;
 }
 
 .section-aside svg {
@@ -822,7 +825,7 @@ textarea:focus-visible {
 .form-number {
   color: var(--dim);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 0.625rem;
   letter-spacing: 0.08em;
 }
 
@@ -839,10 +842,10 @@ textarea:focus-visible {
 }
 
 .skill-card > p {
-  min-height: 38px;
+  min-height: 45px;
   margin: 0;
   color: var(--muted);
-  font-size: 10px;
+  font-size: var(--text-small);
   line-height: 1.6;
 }
 
@@ -860,11 +863,11 @@ textarea:focus-visible {
 .tag-list li,
 .project-tags li,
 .learning-tags li {
-  padding: 5px 8px;
+  padding: 6px 9px;
   border: 1px solid var(--line);
   color: #c3c5bc;
-  font-size: 9px;
-  line-height: 1.35;
+  font-size: var(--text-meta);
+  line-height: 1.4;
   transition: border-color 180ms ease, color 180ms ease;
 }
 
@@ -904,12 +907,12 @@ textarea:focus-visible {
 
 .learning-heading h3 {
   margin: 2px 0 0;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .learning-heading .eyebrow {
-  font-size: 8px;
+  font-size: 0.625rem;
 }
 
 .learning-tags {
@@ -987,7 +990,7 @@ textarea:focus-visible {
   background: rgba(17, 19, 15, 0.83);
   color: var(--paper);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 0.625rem;
   letter-spacing: 0.08em;
 }
 
@@ -1048,10 +1051,10 @@ textarea:focus-visible {
     linear-gradient(135deg, #1d2430, #14171c 75%);
 }
 
-.project-art-classroom {
+.project-art-ecommerce {
   background:
-    radial-gradient(ellipse at 50% 50%, rgba(192, 154, 209, 0.16), transparent 40%),
-    linear-gradient(135deg, #27202c, #17151a 75%);
+    radial-gradient(ellipse at 50% 50%, rgba(199, 243, 107, 0.18), transparent 40%),
+    linear-gradient(135deg, #242b1d, #171a15 75%);
 }
 
 .art-index,
@@ -1059,7 +1062,7 @@ textarea:focus-visible {
   position: absolute;
   color: rgba(241, 240, 233, 0.58);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 0.625rem;
   letter-spacing: 0.11em;
 }
 
@@ -1099,8 +1102,8 @@ textarea:focus-visible {
   color: rgba(148, 212, 188, 0.84);
 }
 
-.project-art-classroom .art-glyph {
-  color: rgba(207, 175, 221, 0.84);
+.project-art-ecommerce .art-glyph {
+  color: rgba(199, 243, 107, 0.84);
 }
 
 .art-orbit {
@@ -1167,7 +1170,7 @@ textarea:focus-visible {
   border: 1px solid rgba(241, 196, 120, 0.2);
   color: #d8b576;
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 0.625rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -1187,7 +1190,7 @@ textarea:focus-visible {
 .project-description {
   margin: 16px 0 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: var(--text-body);
   line-height: 1.8;
 }
 
@@ -1196,8 +1199,8 @@ textarea:focus-visible {
 }
 
 .project-tags li {
-  padding: 4px 7px;
-  font-size: 8px;
+  padding: 5px 8px;
+  font-size: var(--text-meta);
 }
 
 .project-links {
@@ -1214,7 +1217,7 @@ textarea:focus-visible {
   gap: 7px;
   color: #d7d8d1;
   text-decoration: none;
-  font-size: 10px;
+  font-size: var(--text-meta);
   font-weight: 600;
   transition: color 160ms ease;
 }
@@ -1237,7 +1240,7 @@ textarea:focus-visible {
   max-width: 340px;
   margin: 19px 0 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: var(--text-small);
   line-height: 1.85;
 }
 
@@ -1251,7 +1254,7 @@ textarea:focus-visible {
 .education-label {
   color: var(--accent);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 0.625rem;
   letter-spacing: 0.1em;
 }
 
@@ -1264,7 +1267,7 @@ textarea:focus-visible {
 .education-card p {
   margin: 3px 0;
   color: var(--muted);
-  font-size: 10px;
+  font-size: var(--text-meta);
 }
 
 .education-dates {
@@ -1272,7 +1275,7 @@ textarea:focus-visible {
   margin-top: 16px;
   color: var(--dim);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 0.625rem;
 }
 
 .journey-list {
@@ -1304,7 +1307,7 @@ textarea:focus-visible {
   padding-top: 3px;
   color: var(--dim);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 0.625rem;
 }
 
 .journey-marker {
@@ -1325,7 +1328,7 @@ textarea:focus-visible {
 
 .journey-list h3 {
   margin: 0 0 5px;
-  font-size: 14px;
+  font-size: var(--text-small);
   font-weight: 600;
 }
 
@@ -1333,7 +1336,7 @@ textarea:focus-visible {
   max-width: 440px;
   margin: 0;
   color: var(--muted);
-  font-size: 11px;
+  font-size: var(--text-meta);
   line-height: 1.7;
 }
 
@@ -1366,7 +1369,7 @@ textarea:focus-visible {
 }
 
 .offer-card .eyebrow {
-  font-size: 8px;
+  font-size: 0.625rem;
 }
 
 .offer-card h3 {
@@ -1379,14 +1382,14 @@ textarea:focus-visible {
 .offer-dates {
   margin: 0;
   color: var(--muted);
-  font-size: 11px;
+  font-size: var(--text-meta);
 }
 
 .offer-dates {
   margin-top: 7px;
   color: var(--dim);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 0.625rem;
 }
 
 .offer-note {
@@ -1397,69 +1400,122 @@ textarea:focus-visible {
   border: 1px solid rgba(241, 196, 120, 0.22);
   color: #d8b576;
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 0.625rem;
 }
 
 .certification-section {
-  padding: 70px 0;
+  padding: 88px 0;
   border-top: 1px solid var(--line);
   background: #151812;
 }
 
-.certification-inner {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  align-items: center;
-  gap: 70px;
+.certification-heading {
+  max-width: 720px;
+  margin-bottom: 34px;
 }
 
-.certification-inner h2 {
-  font-size: clamp(32px, 3.2vw, 43px);
+.certification-heading h2 {
+  margin: 14px 0 8px;
+  font-size: clamp(34px, 3.5vw, 46px);
+  font-weight: 600;
+  letter-spacing: -0.07em;
+  line-height: 1.15;
+}
+
+.certification-heading h2 span {
+  color: var(--accent);
+}
+
+.certification-heading > p:last-child {
+  max-width: 600px;
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--text-body);
+  line-height: 1.7;
+}
+
+.certification-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .certification-card {
   display: flex;
-  align-items: center;
-  gap: 17px;
-  padding: 22px;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
+  padding: 21px;
   border: 1px solid var(--line);
   background: #191c16;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.certification-card:hover {
+  border-color: rgba(199, 243, 107, 0.4);
+  background: #1b1e18;
 }
 
 .certification-icon {
   display: grid;
   flex: 0 0 auto;
-  width: 42px;
-  height: 42px;
+  width: 34px;
+  height: 34px;
   place-items: center;
   border: 1px solid rgba(199, 243, 107, 0.3);
   color: var(--accent);
-  font-size: 18px;
+  font-size: 16px;
 }
 
-.certification-card .eyebrow {
-  font-size: 8px;
+.certification-copy {
+  min-width: 0;
 }
 
 .certification-card h3 {
-  margin: 4px 0;
-  font-size: 15px;
+  margin: 0 0 7px;
+  color: var(--paper);
+  font-size: 1rem;
   font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.4;
 }
 
-.certification-card p:last-child {
+.certification-meta {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: var(--text-meta);
+  line-height: 1.5;
+}
+
+.certification-description {
   margin: 0;
   color: var(--muted);
-  font-size: 10px;
+  font-size: var(--text-small);
+  line-height: 1.7;
 }
 
-.certification-label {
-  margin-left: auto;
+.certification-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 0 15px;
+  border: 1px solid rgba(241, 240, 233, 0.3);
+  color: var(--paper);
+  text-decoration: none;
+  font-size: var(--text-meta);
+  font-weight: 600;
+  transition: border-color 180ms ease, color 180ms ease;
+}
+
+.certification-link svg {
   color: var(--accent);
-  font-family: var(--mono);
-  font-size: 8px;
-  letter-spacing: 0.08em;
-  white-space: nowrap;
+}
+
+.certification-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .contact-section {
@@ -1487,7 +1543,7 @@ textarea:focus-visible {
   max-width: 390px;
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: var(--text-body);
   line-height: 1.8;
 }
 
@@ -1522,7 +1578,7 @@ textarea:focus-visible {
   gap: 8px;
   color: var(--muted);
   text-decoration: none;
-  font-size: 11px;
+  font-size: var(--text-meta);
   transition: color 160ms ease;
 }
 
@@ -1559,7 +1615,7 @@ textarea:focus-visible {
   flex-direction: column;
   gap: 7px;
   color: #d0d1cb;
-  font-size: 10px;
+  font-size: var(--text-meta);
   font-weight: 600;
 }
 
@@ -1570,7 +1626,7 @@ textarea:focus-visible {
   border-radius: 0;
   background: rgba(0, 0, 0, 0.12);
   color: var(--paper);
-  font-size: 12px;
+  font-size: var(--text-body);
   font-weight: 400;
   transition: border-color 160ms ease;
 }
@@ -1594,7 +1650,7 @@ textarea:focus-visible {
 
 .optional-label {
   color: var(--dim);
-  font-size: 8px;
+  font-size: 0.625rem;
   font-weight: 400;
 }
 
@@ -1613,7 +1669,7 @@ textarea:focus-visible {
 .form-actions .button {
   min-height: 42px;
   border: 0;
-  font-size: 10px;
+  font-size: var(--text-meta);
 }
 
 .form-actions .button:disabled {
@@ -1625,7 +1681,7 @@ textarea:focus-visible {
   min-height: 18px;
   margin: 0;
   color: var(--muted);
-  font-size: 10px;
+  font-size: var(--text-meta);
 }
 
 .site-footer {
@@ -1652,7 +1708,7 @@ textarea:focus-visible {
 .footer-inner > p {
   margin: 0;
   color: var(--dim);
-  font-size: 10px;
+  font-size: var(--text-meta);
 }
 
 .footer-links {
@@ -1670,7 +1726,7 @@ textarea:focus-visible {
   margin-left: 9px;
   color: var(--muted);
   text-decoration: none;
-  font-size: 10px;
+  font-size: var(--text-meta);
 }
 
 .back-to-top:hover {
@@ -1682,7 +1738,7 @@ textarea:focus-visible {
   padding: 0 0 13px;
   color: var(--dim);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 0.625rem;
 }
 
 @keyframes rise-in {
@@ -1702,7 +1758,7 @@ textarea:focus-visible {
   }
 
   .primary-navigation > a:not(.nav-contact) {
-    font-size: 11px;
+    font-size: 0.75rem;
   }
 
   .nav-shell {
@@ -1863,7 +1919,6 @@ textarea:focus-visible {
 
   .about-layout,
   .journey-layout,
-  .certification-inner,
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 38px;
@@ -1919,10 +1974,6 @@ textarea:focus-visible {
     max-width: 480px;
   }
 
-  .certification-inner {
-    gap: 28px;
-  }
-
   .contact-layout {
     gap: 40px;
   }
@@ -1967,7 +2018,7 @@ textarea:focus-visible {
   }
 
   .hero-intro {
-    font-size: 14px;
+    font-size: var(--text-body);
   }
 
   .hero-actions {
@@ -2028,17 +2079,17 @@ textarea:focus-visible {
   }
 
   .float-note b {
-    font-size: 9px;
+    font-size: var(--text-meta);
   }
 
   .float-note small {
-    font-size: 7px;
+    font-size: 0.625rem;
   }
 
   .visual-caption {
     right: 0;
     bottom: 0;
-    font-size: 7px;
+    font-size: 0.625rem;
   }
 
   .scroll-cue {
@@ -2060,7 +2111,7 @@ textarea:focus-visible {
   }
 
   .about-content p {
-    font-size: 12px;
+    font-size: var(--text-body);
   }
 
   .facts-grid {
@@ -2120,7 +2171,7 @@ textarea:focus-visible {
   }
 
   .status-badge {
-    font-size: 7px;
+    font-size: 0.5625rem;
   }
 
   .journey-list::before {
@@ -2137,11 +2188,11 @@ textarea:focus-visible {
   }
 
   .journey-list h3 {
-    font-size: 13px;
+    font-size: var(--text-small);
   }
 
   .journey-list p {
-    font-size: 10px;
+    font-size: var(--text-meta);
   }
 
   .offer-card {
@@ -2152,19 +2203,13 @@ textarea:focus-visible {
     padding: 60px 0;
   }
 
+  .certification-grid {
+    grid-template-columns: 1fr;
+  }
+
   .certification-card {
-    flex-wrap: wrap;
     gap: 12px;
     padding: 17px;
-  }
-
-  .certification-card > div {
-    flex: 1;
-  }
-
-  .certification-label {
-    width: 100%;
-    margin-left: 54px;
   }
 
   .contact-copy h2 {
